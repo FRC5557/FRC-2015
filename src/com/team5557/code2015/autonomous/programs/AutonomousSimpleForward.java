@@ -1,6 +1,7 @@
-package com.team5557.code2015.autonomous;
+package com.team5557.code2015.autonomous.programs;
 
 import com.team5557.code2015.RobotDriveController;
+import com.team5557.code2015.autonomous.Autonomous;
 
 /**
  * 
