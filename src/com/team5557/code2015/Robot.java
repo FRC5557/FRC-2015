@@ -1,7 +1,5 @@
 package com.team5557.code2015;
 
-import com.team5557.code2015.autonomous.AutonomousController;
-
 import edu.wpi.first.wpilibj.IterativeRobot;
 
 /**
@@ -21,7 +19,7 @@ public class Robot extends IterativeRobot {
 	 * Calls on AutonomousController to do its thing
 	 */
 	public void autonomousPeriodic() {
-		AutonomousController.periodic();
+		
 	}
 
 	/**
