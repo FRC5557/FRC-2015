@@ -11,9 +11,9 @@ import edu.wpi.first.wpilibj.IterativeRobot;
  *
  */
 public class Robot extends IterativeRobot {
-	
+
 	Autonomous auto;
-	
+
 	@Override
 	public void robotInit() {
 	}
