@@ -14,9 +14,11 @@ public class Robot extends IterativeRobot {
 	
 	Autonomous auto;
 	
+	@Override
 	public void robotInit() {
 	}
 
+	@Override
 	public void autonomousInit() {
 		auto = new AutonomousSquare();
 	}
@@ -24,6 +26,7 @@ public class Robot extends IterativeRobot {
 	/**
 	 * Calls on AutonomousController to do its thing
 	 */
+	@Override
 	public void autonomousPeriodic() {
 		auto.periodic();
 	}
@@ -31,6 +34,7 @@ public class Robot extends IterativeRobot {
 	/**
 	 * Calls on drive controller to do its thing
 	 */
+	@Override
 	public void teleopPeriodic() {
 		RobotDriveController.joystickDrive();
 	}

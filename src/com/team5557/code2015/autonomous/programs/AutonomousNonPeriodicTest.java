@@ -1,9 +1,10 @@
-package com.team5557.code2015.autonomous.programs.autononperiodic;
+package com.team5557.code2015.autonomous.programs;
 
 import java.util.ArrayList;
 
 import com.team5557.code2015.autonomous.AutonomousAction;
 import com.team5557.code2015.autonomous.AutonomousNonPeriodic;
+import com.team5557.code2015.autonomous.programs.actions.AutonomousActionMoveForward;
 
 public class AutonomousNonPeriodicTest implements AutonomousNonPeriodic {
 
@@ -15,7 +16,7 @@ public class AutonomousNonPeriodicTest implements AutonomousNonPeriodic {
 		counter = 0;
 		
 		actions = new ArrayList<AutonomousAction>();
-		actions.add(new AutonomousActionMoveForward());
+		actions.add(new AutonomousActionMoveForward(100));
 		
 		current = actions.get(0);
 	}

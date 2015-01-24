@@ -1,10 +1,16 @@
-package com.team5557.code2015.autonomous.programs.square;
+package com.team5557.code2015.autonomous.programs.actions;
 
 import com.team5557.code2015.RobotDriveController;
 import com.team5557.code2015.autonomous.AutonomousAction;
 
-public class AutonomousActionTurnRight90 implements AutonomousAction {
+public class AutonomousActionTurnRight implements AutonomousAction {
 
+	int count;
+	
+	public AutonomousActionTurnRight(int counts) {
+		count = counts;
+	}
+	
 	@Override
 	public void run() {
 		RobotDriveController.drive().drive(1.0, 1.0);
@@ -12,7 +18,7 @@ public class AutonomousActionTurnRight90 implements AutonomousAction {
 
 	@Override
 	public int getRunLength() {
-		return 50;
+		return count;
 	}
 
 }
