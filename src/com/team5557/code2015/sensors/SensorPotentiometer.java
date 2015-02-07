@@ -4,13 +4,13 @@ import edu.wpi.first.wpilibj.AnalogPotentiometer;
 
 public class SensorPotentiometer {
 
-	private static AnalogPotentiometer potentiometer;
+	private AnalogPotentiometer potentiometer;
 	
-	static {
-		potentiometer = new AnalogPotentiometer(0);
+	public SensorPotentiometer(int id) {
+		potentiometer = new AnalogPotentiometer(id);
 	}
 	
-	public static AnalogPotentiometer getPotentiometer() {
+	public AnalogPotentiometer get() {
 		return potentiometer;
 	}
 
