@@ -1,6 +1,7 @@
 package com.team5557.code2015.autonomous;
 
-import com.team5557.code2015.autonomous.programs.AutonomousSimpleForward;
+import com.team5557.code2015.actions.Periodic;
+import com.team5557.code2015.autonomous.programs.square.AutonomousSquare;
 
 /**
  * 
@@ -14,14 +15,14 @@ public class AutonomousController {
 	/**
 	 * Generalized Autonomous type variable to contain specific program
 	 */
-	private static Autonomous current;
+	private static Periodic current;
 
 	/**
 	 * Sets the value of the 'current' variable to the necessary autonomous
 	 * program
 	 */
 	static {
-		current = new AutonomousSimpleForward();
+		current = new AutonomousSquare();
 	}
 
 	/**
@@ -34,7 +35,7 @@ public class AutonomousController {
 	/**
 	 * @return current Autonomous program
 	 */
-	public static Autonomous getCurrent() {
+	public static Periodic getCurrent() {
 		return current;
 	}
 

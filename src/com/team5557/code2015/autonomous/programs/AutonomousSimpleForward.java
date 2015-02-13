@@ -1,14 +1,14 @@
 package com.team5557.code2015.autonomous.programs;
 
 import com.team5557.code2015.RobotDriveController;
-import com.team5557.code2015.autonomous.Autonomous;
+import com.team5557.code2015.actions.Periodic;
 
 /**
  * 
  * Simple autonomous program that moves forward for about 2 seconds
  *
  */
-public class AutonomousSimpleForward implements Autonomous {
+public class AutonomousSimpleForward implements Periodic {
 
 	private int count = 0;
 

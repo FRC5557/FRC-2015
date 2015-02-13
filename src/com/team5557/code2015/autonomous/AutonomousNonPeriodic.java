@@ -2,7 +2,9 @@ package com.team5557.code2015.autonomous;
 
 import java.util.ArrayList;
 
-public abstract class AutonomousNonPeriodic implements Autonomous {
+import com.team5557.code2015.actions.Periodic;
+
+public abstract class AutonomousNonPeriodic implements Periodic {
 
 	public AutonomousNonPeriodic() {
 		actions = new ArrayList<AutonomousAction>();
