@@ -33,6 +33,7 @@ public class RobotDriveController {
 		drive.setInvertedMotor(MotorType.kFrontRight, true);
 		drive.setInvertedMotor(MotorType.kRearLeft, true);
 		drive.setInvertedMotor(MotorType.kRearRight, true);
+		RobotMotorController.addMotor(9);
 	}
 
 	/**
@@ -40,7 +41,7 @@ public class RobotDriveController {
 	 * drive
 	 */
 	public static void joystickDrive() {
-		drive().arcadeDrive(RobotJoystickController.joystick());
+		drive.arcadeDrive(RobotJoystickController.joystick());
 	}
 
 	/**
