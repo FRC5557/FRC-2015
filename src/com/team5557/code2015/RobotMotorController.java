@@ -29,7 +29,7 @@ public class RobotMotorController {
 			return false;
 		}
 	}
-	
+
 	public static boolean stopMotor(int id) {
 		return motorSpeed(id, 0.0);
 	}
