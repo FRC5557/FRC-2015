@@ -9,14 +9,14 @@ public class RobotController {
 
 	private static void mainActuator() {
 		double reading = RobotSensorController.getPotentiometer("main").get();
-		double axis = RobotJoystickController.joystick().getThrottle();
-		if (axis > 0.0 && reading < 0.85) {
-			RobotMotorController.motorSpeed(9, axis);
-			System.out.println("up");
-		}
-		if (axis < 0.0 && reading > 0.12) {
-			RobotMotorController.motorSpeed(9, axis);
-			System.out.println("down");
+		boolean up = RobotJoystickController.joystick().getRawButton(10);
+		boolean down = RobotJoystickController.joystick().getRawButton(12);
+		if(up && reading < 0.85) {
+			RobotMotorController.motorSpeed(9, 1.0);
+		} else if (down && reading > 0.20) {
+			RobotMotorController.motorSpeed(9, -1.0);
+		} else {
+			RobotMotorController.motorSpeed(9, 0.0);
 		}
 	}
 
