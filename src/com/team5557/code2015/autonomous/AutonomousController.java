@@ -1,6 +1,7 @@
 package com.team5557.code2015.autonomous;
 
-import com.team5557.code2015.autonomous.programs.AutonomousSimpleForward;
+import com.team5557.code2015.autonomous.programs.square.AutonomousSquare;
+
 
 /**
  * 
@@ -21,7 +22,7 @@ public class AutonomousController {
 	 * program
 	 */
 	static {
-		current = new AutonomousSimpleForward();
+		current = new AutonomousSquare();
 	}
 
 	/**

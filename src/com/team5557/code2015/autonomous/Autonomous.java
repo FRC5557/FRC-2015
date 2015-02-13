@@ -1,17 +1,33 @@
 package com.team5557.code2015.autonomous;
 
-/**
- * 
- * The main purpose of this interface is to allow all Autonomous problems to be
- * defined under a single type declaration
- *
- */
-public interface Autonomous {
+import java.util.ArrayList;
 
-	/**
-	 * Every Autonomous program should have a function that runs the tasks
-	 * programmed in a manner to be suitable for repetition every 20 msec
-	 */
-	public void periodic();
+public abstract class Autonomous {
+
+	public Autonomous() {
+		actions = new ArrayList<AutonomousAction>();
+		counter = 0;
+		currentId = 0;
+	}
+
+	protected ArrayList<AutonomousAction> actions;
+	protected AutonomousAction current;
+	protected int counter;
+	protected int currentId;
+
+	public void runNextAction() {
+		if (counter <= current.getRunLength()) {
+			current.run();
+			counter++;
+		} else if ((currentId + 1) < actions.size()) {
+			currentId++;
+			counter = 0;
+			current = actions.get(currentId);
+		}
+	}
+
+	public void periodic() {
+		runNextAction();
+	}
 
 }

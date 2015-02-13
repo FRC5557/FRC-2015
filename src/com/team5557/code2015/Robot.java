@@ -36,6 +36,8 @@ public class Robot extends IterativeRobot {
 	 */
 	@Override
 	public void teleopPeriodic() {
-		RobotDriveController.joystickDrive();
+		RobotController.joystickControl();
+		System.out
+				.println(RobotSensorController.getPotentiometer("main").get());
 	}
 }
