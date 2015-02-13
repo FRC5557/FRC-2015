@@ -2,7 +2,6 @@ package com.team5557.code2015.autonomous;
 
 import com.team5557.code2015.autonomous.programs.square.AutonomousSquare;
 
-
 /**
  * 
  * This class is used to quickly switch between autonomous programs While a
