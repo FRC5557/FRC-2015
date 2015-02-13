@@ -1,13 +1,23 @@
 package com.team5557.code2015;
 
-import edu.wpi.first.wpilibj.Joystick.AxisType;
-
 public class RobotController {
 
 	public static void joystickControl() {
 		RobotDriveController.joystickDrive();
-		RobotMotorController.motorSpeed(1, RobotJoystickController.joystick()
-				.getAxis(AxisType.kThrottle));
+		mainActuator();
+	}
+
+	private static void mainActuator() {
+		double reading = RobotSensorController.getPotentiometer("main").get();
+		double axis = RobotJoystickController.joystick().getThrottle();
+		if (axis > 0.0 && reading < 0.85) {
+			RobotMotorController.motorSpeed(9, axis);
+			System.out.println("up");
+		}
+		if (axis < 0.0 && reading > 0.12) {
+			RobotMotorController.motorSpeed(9, axis);
+			System.out.println("down");
+		}
 	}
 
 }

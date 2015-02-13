@@ -6,9 +6,6 @@ import java.util.Map;
 import com.team5557.code2015.sensors.SensorPotentiometer;
 import com.team5557.code2015.sensors.SensorUltrasonic;
 
-import edu.wpi.first.wpilibj.AnalogPotentiometer;
-import edu.wpi.first.wpilibj.Ultrasonic;
-
 public class RobotSensorController {
 
 	private static Map<String, SensorPotentiometer> potentiometers;
@@ -22,12 +19,12 @@ public class RobotSensorController {
 		ultrasonics.put("main", new SensorUltrasonic(0, 1));
 	}
 
-	public static AnalogPotentiometer getPotentiometer(String id) {
-		return potentiometers.get(id).get();
+	public static SensorPotentiometer getPotentiometer(String id) {
+		return potentiometers.get(id);
 	}
 
-	public static Ultrasonic getUltrasonic(String id) {
-		return ultrasonics.get(id).get();
+	public static SensorUltrasonic getUltrasonic(String id) {
+		return ultrasonics.get(id);
 	}
 
 }

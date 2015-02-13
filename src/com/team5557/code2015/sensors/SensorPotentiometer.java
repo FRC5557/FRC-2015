@@ -10,8 +10,12 @@ public class SensorPotentiometer {
 		potentiometer = new AnalogPotentiometer(id);
 	}
 
-	public AnalogPotentiometer get() {
+	public AnalogPotentiometer getPotentiometer() {
 		return potentiometer;
+	}
+
+	public double get() {
+		return 1 - potentiometer.get();
 	}
 
 }

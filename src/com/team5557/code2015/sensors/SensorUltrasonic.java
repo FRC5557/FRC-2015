@@ -10,7 +10,7 @@ public class SensorUltrasonic {
 		ultrasonic = new Ultrasonic(outputPort, inputPort);
 	}
 
-	public Ultrasonic get() {
+	public Ultrasonic getUltrasonic() {
 		return ultrasonic;
 	}
 
