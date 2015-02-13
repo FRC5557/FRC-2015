@@ -1,7 +1,7 @@
 package com.team5557.code2015;
 
 import com.team5557.code2015.autonomous.Autonomous;
-import com.team5557.code2015.autonomous.programs.square.AutonomousSquare;
+import com.team5557.code2015.autonomous.programs.AutonomousSquare;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
 

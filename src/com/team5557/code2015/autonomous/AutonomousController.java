@@ -1,6 +1,6 @@
 package com.team5557.code2015.autonomous;
 
-import com.team5557.code2015.autonomous.programs.square.AutonomousSquare;
+import com.team5557.code2015.autonomous.programs.AutonomousSquare;
 
 /**
  * 

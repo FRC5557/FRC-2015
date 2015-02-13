@@ -1,8 +1,8 @@
-package com.team5557.code2015.autonomous.programs.square;
+package com.team5557.code2015.autonomous.programs;
 
 import com.team5557.code2015.autonomous.Autonomous;
-import com.team5557.code2015.autonomous.programs.actions.AutonomousActionMoveForward;
-import com.team5557.code2015.autonomous.programs.actions.AutonomousActionTurnRight;
+import com.team5557.code2015.autonomous.actions.AutonomousActionMoveForward;
+import com.team5557.code2015.autonomous.actions.AutonomousActionTurnRight;
 
 public class AutonomousSquare extends Autonomous {
 
