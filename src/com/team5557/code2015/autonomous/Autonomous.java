@@ -2,7 +2,9 @@ package com.team5557.code2015.autonomous;
 
 import java.util.ArrayList;
 
-public abstract class Autonomous {
+import com.team5557.code2015.actions.ActionSet;
+
+public abstract class Autonomous extends ActionSet {
 
 	public Autonomous() {
 		actions = new ArrayList<AutonomousAction>();

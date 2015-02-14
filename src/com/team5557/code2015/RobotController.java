@@ -1,6 +1,5 @@
 package com.team5557.code2015;
 
-
 public class RobotController {
 
 	public static void joystickControl() {
