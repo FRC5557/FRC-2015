@@ -14,12 +14,15 @@ public class DashboardController {
 	 * Function to be called periodically
 	 */
 	public static void putData() {
-		//Put main actuator percentage
+		// Put main actuator percentage
 		SmartDashboard.putNumber("Potentiometer Percent", RobotSensorController
 				.getPotentiometer("main").getPercent());
-		SmartDashboard.putNumber("Accelerometer X", SensorBuiltInAccelerometer.getX());
-		SmartDashboard.putNumber("Accelerometer Y", SensorBuiltInAccelerometer.getY());
-		SmartDashboard.putNumber("Accelerometer Z", SensorBuiltInAccelerometer.getZ());
+		SmartDashboard.putNumber("Accelerometer X",
+				SensorBuiltInAccelerometer.getX());
+		SmartDashboard.putNumber("Accelerometer Y",
+				SensorBuiltInAccelerometer.getY());
+		SmartDashboard.putNumber("Accelerometer Z",
+				SensorBuiltInAccelerometer.getZ());
 	}
 
 }

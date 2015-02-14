@@ -14,7 +14,7 @@ public class SensorPotentiometer {
 
 	/**
 	 * Builder is based on port id
-	 * 
+	 *
 	 * @param id
 	 */
 	public SensorPotentiometer(int id, double low, double high) {
@@ -26,7 +26,7 @@ public class SensorPotentiometer {
 	/**
 	 * Returns percent height based on lowest and highest values the
 	 * potentiometer can have
-	 * 
+	 *
 	 * @return percent
 	 */
 	public int getPercent() {

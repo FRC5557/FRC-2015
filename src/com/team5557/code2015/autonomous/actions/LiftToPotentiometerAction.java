@@ -15,7 +15,7 @@ public class LiftToPotentiometerAction extends Action {
 
 	/**
 	 * Constructor, requires the reading that needs to be achieved
-	 * 
+	 *
 	 * @param potentiometerReading
 	 */
 	public LiftToPotentiometerAction(double potentiometerReading) {
@@ -27,10 +27,10 @@ public class LiftToPotentiometerAction extends Action {
 			// conclude that actuator needs to push upwards
 			liftUpwards = true;
 		} else if (reading == MathUtility.round(currentReading, 2)) { // if
-																		// reading
-																		// is
-																		// within
-																		// 0.01
+			// reading
+			// is
+			// within
+			// 0.01
 			// satisfy action
 			setSatisfied(true);
 		} else { // otherwise, we conclude the arm needs to go down

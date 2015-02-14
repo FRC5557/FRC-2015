@@ -12,7 +12,7 @@ public class SensorUltrasonic {
 	/**
 	 * Constructor requires two ports - one input and output This class is made
 	 * for a ping and respond potentiometer
-	 * 
+	 *
 	 * @param inputPort
 	 * @param outputPort
 	 */
