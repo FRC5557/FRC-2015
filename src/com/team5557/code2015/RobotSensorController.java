@@ -20,7 +20,7 @@ public class RobotSensorController {
 		ultrasonics = new HashMap<String, SensorUltrasonic>();
 
 		// initializes currently used sensors
-		potentiometers.put("main", new SensorPotentiometer(0));
+		potentiometers.put("main", new SensorPotentiometer(0, 0.03, 0.87));
 		ultrasonics.put("main", new SensorUltrasonic(0, 1));
 	}
 
