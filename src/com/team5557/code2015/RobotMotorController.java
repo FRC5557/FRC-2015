@@ -5,6 +5,11 @@ import java.util.Map;
 
 import edu.wpi.first.wpilibj.Talon;
 
+/**
+ *
+ * Class for Motors that do not belong to the drive
+ *
+ */
 public class RobotMotorController {
 
 	private static Map<Integer, Talon> motors;
@@ -21,6 +26,13 @@ public class RobotMotorController {
 		return motors.get(id);
 	}
 
+	/**
+	 * Gets motor from hashmap by id and sets its speed
+	 *
+	 * @param id
+	 * @param speed
+	 * @return whether motor was found in HashMap
+	 */
 	public static boolean motorSpeed(int id, double speed) {
 		if (motors.containsKey(id)) {
 			getMotor(id).set(speed);
@@ -30,6 +42,12 @@ public class RobotMotorController {
 		}
 	}
 
+	/**
+	 * stops motor based on id
+	 *
+	 * @param id
+	 * @return whether motor id was found in HashMap
+	 */
 	public static boolean stopMotor(int id) {
 		return motorSpeed(id, 0.0);
 	}

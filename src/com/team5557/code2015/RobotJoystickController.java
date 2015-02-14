@@ -3,7 +3,7 @@ package com.team5557.code2015;
 import edu.wpi.first.wpilibj.Joystick;
 
 /**
- * 
+ *
  * Class containing any variables and relevant functions to the control inputs
  * of the robot
  *

@@ -4,14 +4,33 @@ import com.team5557.code2015.autonomous.actions.LiftToPotentiometerAction;
 
 public class RobotController {
 
+	// Variable for the button actuator presets
 	public static LiftToPotentiometerAction potentiometerAction;
 
+	/**
+	 * Does necessary robot initialization
+	 */
+	private static void initRobot() {
+		// initializes potentiometer PWM port
+		RobotMotorController.addMotor(9);
+	}
+
+	static {
+		initRobot();
+	}
+
+	/**
+	 * Called on by the main class to run every 20 msec
+	 */
 	public static void joystickControl() {
 		RobotDriveController.joystickDrive();
 		mainActuator();
 		liftAction();
 	}
 
+	/**
+	 * Checks if any of the button presets should be activated
+	 */
 	private static void liftAction() {
 		boolean pos1 = RobotJoystickController.joystick().getRawButton(1);
 		boolean pos2 = RobotJoystickController.joystick().getRawButton(2);
@@ -19,7 +38,9 @@ public class RobotController {
 		boolean pos4 = RobotJoystickController.joystick().getRawButton(4);
 
 		// TODO set correct positions
+		// if there is not a current potentiometer action...
 		if (potentiometerAction == null) {
+			// check if any of the preset buttons are activated
 			if (pos1) {
 				potentiometerAction = new LiftToPotentiometerAction(0);
 			} else if (pos2) {
@@ -29,25 +50,36 @@ public class RobotController {
 			} else if (pos4) {
 				potentiometerAction = new LiftToPotentiometerAction(0);
 			}
-		} else {
+		} else { // otherwise...
+			// run current lift action
 			potentiometerAction.run();
+			// check if the correct height is reached
 			if (potentiometerAction.isSatisfied()) {
+				// reset potentiometer action
 				potentiometerAction = null;
 			}
 		}
 	}
 
+	/**
+	 * Controls for the actuator motor
+	 */
 	private static void mainActuator() {
 		double reading = RobotSensorController.getPotentiometer("main").get();
 		boolean up = RobotJoystickController.joystick().getRawButton(10);
 		boolean down = RobotJoystickController.joystick().getRawButton(12);
 		boolean slow = RobotJoystickController.joystick().getRawButton(2);
 
+		// if any buttons are pressed, the preset lift action will be
+		// interrupted
 		if (slow || up || down) {
 			potentiometerAction = null;
 		}
 
+		// if slow trigger is pressed...
 		if (slow) {
+			// sets actuator to push up, down, or stop depending on buttons
+			// pressed
 			if (up) {
 				RobotMotorController.motorSpeed(9, 0.25);
 			} else if (down) {
@@ -55,11 +87,14 @@ public class RobotController {
 			} else {
 				RobotMotorController.stopMotor(9);
 			}
-		} else if (down && reading > 0.25) {
+		} else if (down && reading > 0.25) { // if full speed down is activated,
+			// and potentiometer is above
+			// lower limit
 			RobotMotorController.motorSpeed(9, -1.0);
-		} else if (up && reading < 0.85) {
+		} else if (up && reading < 0.85) { // if full speed up is activated, and
+			// potentiometer is below limit
 			RobotMotorController.motorSpeed(9, 1.0);
-		} else {
+		} else { // otherwise, stop motor
 			RobotMotorController.stopMotor(9);
 		}
 	}

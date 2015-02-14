@@ -4,7 +4,7 @@ import edu.wpi.first.wpilibj.RobotDrive;
 import edu.wpi.first.wpilibj.RobotDrive.MotorType;
 
 /**
- * 
+ *
  * Contains functions and variables relevant to controlling the drive of the
  * robot
  *
@@ -33,7 +33,6 @@ public class RobotDriveController {
 		drive.setInvertedMotor(MotorType.kFrontRight, true);
 		drive.setInvertedMotor(MotorType.kRearLeft, true);
 		drive.setInvertedMotor(MotorType.kRearRight, true);
-		RobotMotorController.addMotor(9);
 	}
 
 	/**

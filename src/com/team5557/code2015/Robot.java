@@ -5,11 +5,6 @@ import com.team5557.code2015.utility.DashboardController;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
 
-/**
- * 
- * Main class, contains all the base WPILib functions
- *
- */
 public class Robot extends IterativeRobot {
 
 	@Override
@@ -21,7 +16,9 @@ public class Robot extends IterativeRobot {
 	}
 
 	/**
-	 * Calls on AutonomousController to do its thing
+	 * Runs every 20 msec during Autonomous period Calls on AutonomousController
+	 * to do its thing Calls on the Dashboard controller to put data on the
+	 * SmartDashboard
 	 */
 	@Override
 	public void autonomousPeriodic() {
@@ -30,7 +27,9 @@ public class Robot extends IterativeRobot {
 	}
 
 	/**
-	 * Calls on drive controller to do its thing
+	 * Runs every 20 msec during Autonomous period Calls on RobotController to
+	 * do its thing Calls on the Dashboard controller to put data on the
+	 * SmartDashboard
 	 */
 	@Override
 	public void teleopPeriodic() {
