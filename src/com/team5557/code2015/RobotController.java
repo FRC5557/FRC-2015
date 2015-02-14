@@ -36,23 +36,23 @@ public class RobotController {
 	 * Checks if any of the button presets should be activated
 	 */
 	private static void liftAction() {
-		boolean pos1 = RobotJoystickController.joystick().getRawButton(1);
-		boolean pos2 = RobotJoystickController.joystick().getRawButton(2);
-		boolean pos3 = RobotJoystickController.joystick().getRawButton(3);
-		boolean pos4 = RobotJoystickController.joystick().getRawButton(4);
+		boolean pos1 = RobotJoystickController.joystick().getRawButton(5);
+		boolean pos2 = RobotJoystickController.joystick().getRawButton(3);
+		boolean pos3 = RobotJoystickController.joystick().getRawButton(4);
+		boolean pos4 = RobotJoystickController.joystick().getRawButton(6);
 
 		// TODO set correct positions
 		// if there is not a current potentiometer action...
 		if (potentiometerAction == null) {
 			// check if any of the preset buttons are activated
 			if (pos1) {
-				potentiometerAction = new MoveToPotentiometerAction(0);
+				potentiometerAction = new MoveToPotentiometerAction(0.30);
 			} else if (pos2) {
-				potentiometerAction = new MoveToPotentiometerAction(0);
+				potentiometerAction = new MoveToPotentiometerAction(0.50);
 			} else if (pos3) {
-				potentiometerAction = new MoveToPotentiometerAction(0);
+				potentiometerAction = new MoveToPotentiometerAction(0.70);
 			} else if (pos4) {
-				potentiometerAction = new MoveToPotentiometerAction(0);
+				potentiometerAction = new MoveToPotentiometerAction(0.85);
 			}
 		} else { // otherwise...
 			// run current lift action

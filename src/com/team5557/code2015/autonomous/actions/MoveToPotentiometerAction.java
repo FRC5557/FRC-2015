@@ -23,7 +23,7 @@ public class MoveToPotentiometerAction extends Action {
 		double currentReading = RobotSensorController.getPotentiometer("main")
 				.get();
 		// if reading is less than the current potentiometer reading...
-		if (reading < currentReading) {
+		if (reading > currentReading) {
 			// conclude that actuator needs to push upwards
 			liftUpwards = true;
 		} else if (reading == MathUtility.round(currentReading, 2)) { // if

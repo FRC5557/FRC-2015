@@ -19,6 +19,9 @@ public class DashboardController {
 		// Put main actuator percentage
 		SmartDashboard.putNumber("Potentiometer Percent", RobotSensorController
 				.getPotentiometer("main").getPercent());
+		// Potentiometer raw reading
+		SmartDashboard.putNumber("Potentiometer Raw Value",
+				RobotSensorController.getPotentiometer("main").get());
 		// Put accelerometer data
 		SmartDashboard.putNumber("Accelerometer X",
 				SensorBuiltInAccelerometer.getX());
