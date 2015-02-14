@@ -2,6 +2,10 @@ package com.team5557.code2015.autonomous;
 
 import java.util.ArrayList;
 
+/**
+ * Class made primarily for Autonomous programs Contains a set of actions that
+ * will be run until there are no more left
+ */
 public abstract class ActionSet {
 
 	public ArrayList<Action> actions;
@@ -20,6 +24,10 @@ public abstract class ActionSet {
 		return currentAction;
 	}
 
+	/**
+	 * Checks if action is satisfied, if it is, then runs the next one if there
+	 * is one in the arraylist
+	 */
 	public void runActions() {
 		currentAction.run();
 		if (currentAction.isSatisfied()) {

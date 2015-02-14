@@ -3,8 +3,8 @@ package com.team5557.code2015.sensors;
 import edu.wpi.first.wpilibj.AnalogPotentiometer;
 
 /**
- * Wrapper class for the WPILib built in potentiometer class
- * Modifies output values and adds more methods
+ * Wrapper class for the WPILib built in potentiometer class Modifies output
+ * values and adds more methods
  */
 public class SensorPotentiometer {
 
@@ -14,6 +14,7 @@ public class SensorPotentiometer {
 
 	/**
 	 * Builder is based on port id
+	 * 
 	 * @param id
 	 */
 	public SensorPotentiometer(int id, double low, double high) {
@@ -23,7 +24,9 @@ public class SensorPotentiometer {
 	}
 
 	/**
-	 * Returns percent height based on lowest and highest values the potentiometer can have
+	 * Returns percent height based on lowest and highest values the
+	 * potentiometer can have
+	 * 
 	 * @return percent
 	 */
 	public int getPercent() {
@@ -40,8 +43,8 @@ public class SensorPotentiometer {
 	}
 
 	/**
-	 * Returns the inverted potentiometer value...because we screwed up the wiring
-	 * Not much of a problem though
+	 * Returns the inverted potentiometer value...because we screwed up the
+	 * wiring Not much of a problem though
 	 */
 	public double get() {
 		return 1 - potentiometer.get();

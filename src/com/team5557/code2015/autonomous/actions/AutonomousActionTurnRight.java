@@ -3,6 +3,9 @@ package com.team5557.code2015.autonomous.actions;
 import com.team5557.code2015.RobotDriveController;
 import com.team5557.code2015.autonomous.Action;
 
+/**
+ * Simple turn action based on timings
+ */
 public class AutonomousActionTurnRight extends Action {
 
 	int totalCount;

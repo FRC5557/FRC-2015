@@ -4,6 +4,9 @@ import com.team5557.code2015.autonomous.ActionSet;
 import com.team5557.code2015.autonomous.actions.AutonomousActionMoveForward;
 import com.team5557.code2015.autonomous.actions.AutonomousActionTurnRight;
 
+/**
+ * Sample autonomous program to demonstrate the custom action scheduler
+ */
 public class AutonomousSquare extends ActionSet {
 
 	public AutonomousSquare() {
