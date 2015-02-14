@@ -30,7 +30,7 @@ public class SensorPotentiometer {
 	 * @return percent
 	 */
 	public int getPercent() {
-		double percent = (get() + low_val) / high_val * 100.0;
+		double percent = (get() - low_val) / high_val * 100.0;
 		if (percent >= 100.0) {
 			return 100;
 		} else {
