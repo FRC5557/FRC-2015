@@ -7,14 +7,6 @@ import edu.wpi.first.wpilibj.IterativeRobot;
 
 public class Robot extends IterativeRobot {
 
-	@Override
-	public void robotInit() {
-	}
-
-	@Override
-	public void autonomousInit() {
-	}
-
 	/**
 	 * Runs every 20 msec during Autonomous period Calls on AutonomousController
 	 * to do its thing Calls on the Dashboard controller to put data on the
