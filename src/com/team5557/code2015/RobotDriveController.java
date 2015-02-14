@@ -28,7 +28,10 @@ public class RobotDriveController {
 	 * steering is natural
 	 */
 	private static void initDrive() {
-		drive = new RobotDrive(0, 1, 2, 3);
+		drive = new RobotDrive(RobotMotorController.getMotor(0),
+				RobotMotorController.getMotor(1),
+				RobotMotorController.getMotor(2),
+				RobotMotorController.getMotor(3));
 		drive.setInvertedMotor(MotorType.kFrontLeft, true);
 		drive.setInvertedMotor(MotorType.kFrontRight, true);
 		drive.setInvertedMotor(MotorType.kRearLeft, true);

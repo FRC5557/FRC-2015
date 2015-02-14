@@ -12,6 +12,10 @@ public class RobotController {
 	 */
 	private static void initRobot() {
 		// initializes potentiometer PWM port
+		RobotMotorController.addMotor(0);
+		RobotMotorController.addMotor(1);
+		RobotMotorController.addMotor(2);
+		RobotMotorController.addMotor(3);
 		RobotMotorController.addMotor(9);
 	}
 

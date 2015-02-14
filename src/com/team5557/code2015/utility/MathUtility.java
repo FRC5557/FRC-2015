@@ -27,7 +27,7 @@ public class MathUtility {
 	/**
 	 * Function calculates an output value that is curved as to stop the motors
 	 * more accurately Based on goal value and the current value
-	 * 
+	 *
 	 * @param goal
 	 * @param current
 	 * @param slowValue
