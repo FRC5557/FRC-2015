@@ -1,11 +1,11 @@
 package com.team5557.code2015;
 
-import com.team5557.code2015.autonomous.actions.LiftToPotentiometerAction;
+import com.team5557.code2015.autonomous.actions.MoveToPotentiometerAction;
 
 public class RobotController {
 
 	// Variable for the button actuator presets
-	public static LiftToPotentiometerAction potentiometerAction;
+	public static MoveToPotentiometerAction potentiometerAction;
 
 	/**
 	 * Does necessary robot initialization
@@ -46,13 +46,13 @@ public class RobotController {
 		if (potentiometerAction == null) {
 			// check if any of the preset buttons are activated
 			if (pos1) {
-				potentiometerAction = new LiftToPotentiometerAction(0);
+				potentiometerAction = new MoveToPotentiometerAction(0);
 			} else if (pos2) {
-				potentiometerAction = new LiftToPotentiometerAction(0);
+				potentiometerAction = new MoveToPotentiometerAction(0);
 			} else if (pos3) {
-				potentiometerAction = new LiftToPotentiometerAction(0);
+				potentiometerAction = new MoveToPotentiometerAction(0);
 			} else if (pos4) {
-				potentiometerAction = new LiftToPotentiometerAction(0);
+				potentiometerAction = new MoveToPotentiometerAction(0);
 			}
 		} else { // otherwise...
 			// run current lift action

@@ -27,7 +27,7 @@ public class DashboardController {
 		SmartDashboard.putNumber("Accelerometer Z",
 				SensorBuiltInAccelerometer.getZ());
 		// Put speed data from all motors
-		for(Talon tal : RobotMotorController.getMotors().values()) {
+		for (Talon tal : RobotMotorController.getMotors().values()) {
 			SmartDashboard.putNumber("Motor " + tal.getChannel(), tal.get());
 		}
 	}

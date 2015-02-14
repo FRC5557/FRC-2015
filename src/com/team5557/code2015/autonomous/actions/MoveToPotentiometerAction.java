@@ -8,7 +8,7 @@ import com.team5557.code2015.utility.MathUtility;
 /**
  * Action that extends the main actuator to the value in the constructor
  */
-public class LiftToPotentiometerAction extends Action {
+public class MoveToPotentiometerAction extends Action {
 
 	private double reading;
 	private boolean liftUpwards;
@@ -18,7 +18,7 @@ public class LiftToPotentiometerAction extends Action {
 	 *
 	 * @param potentiometerReading
 	 */
-	public LiftToPotentiometerAction(double potentiometerReading) {
+	public MoveToPotentiometerAction(double potentiometerReading) {
 		reading = potentiometerReading;
 		double currentReading = RobotSensorController.getPotentiometer("main")
 				.get();
