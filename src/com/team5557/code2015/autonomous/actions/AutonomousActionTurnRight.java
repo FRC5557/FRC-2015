@@ -21,7 +21,7 @@ public class AutonomousActionTurnRight extends Action {
 
 	@Override
 	protected void checkSatisfaction() {
-		if(currentCount >= totalCount) {
+		if (currentCount >= totalCount) {
 			setSatisfied(true);
 		}
 	}

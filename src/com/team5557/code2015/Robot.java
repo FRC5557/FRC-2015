@@ -1,7 +1,6 @@
 package com.team5557.code2015;
 
-import com.team5557.code2015.autonomous.Autonomous;
-import com.team5557.code2015.autonomous.programs.AutonomousSquare;
+import com.team5557.code2015.autonomous.AutonomousController;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
 
@@ -12,15 +11,12 @@ import edu.wpi.first.wpilibj.IterativeRobot;
  */
 public class Robot extends IterativeRobot {
 
-	Autonomous auto;
-
 	@Override
 	public void robotInit() {
 	}
 
 	@Override
 	public void autonomousInit() {
-		auto = new AutonomousSquare();
 	}
 
 	/**
@@ -28,7 +24,7 @@ public class Robot extends IterativeRobot {
 	 */
 	@Override
 	public void autonomousPeriodic() {
-		auto.periodic();
+		AutonomousController.periodic();
 	}
 
 	/**

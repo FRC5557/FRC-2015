@@ -16,7 +16,7 @@ public abstract class Action {
 	}
 
 	protected abstract void periodic();
-	
+
 	protected abstract void checkSatisfaction();
 
 	public boolean isSatisfied() {
