@@ -1,7 +1,7 @@
 package com.team5557.code2015.autonomous.actions;
 
 import com.team5557.code2015.RobotDriveController;
-import com.team5557.code2015.actions.Action;
+import com.team5557.code2015.autonomous.Action;
 
 public class AutonomousActionTurnRight extends Action {
 

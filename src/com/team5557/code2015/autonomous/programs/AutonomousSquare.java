@@ -1,6 +1,6 @@
 package com.team5557.code2015.autonomous.programs;
 
-import com.team5557.code2015.actions.ActionSet;
+import com.team5557.code2015.autonomous.ActionSet;
 import com.team5557.code2015.autonomous.actions.AutonomousActionMoveForward;
 import com.team5557.code2015.autonomous.actions.AutonomousActionTurnRight;
 

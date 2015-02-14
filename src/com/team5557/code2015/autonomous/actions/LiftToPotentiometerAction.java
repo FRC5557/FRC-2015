@@ -1,7 +1,8 @@
-package com.team5557.code2015.actions;
+package com.team5557.code2015.autonomous.actions;
 
 import com.team5557.code2015.RobotMotorController;
 import com.team5557.code2015.RobotSensorController;
+import com.team5557.code2015.autonomous.Action;
 import com.team5557.code2015.utility.MathUtility;
 
 public class LiftToPotentiometerAction extends Action {
