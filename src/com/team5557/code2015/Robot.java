@@ -1,43 +1,31 @@
 package com.team5557.code2015;
 
-import com.team5557.code2015.autonomous.Autonomous;
-import com.team5557.code2015.autonomous.programs.square.AutonomousSquare;
+import com.team5557.code2015.autonomous.AutonomousController;
+import com.team5557.code2015.utility.DashboardController;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
 
-/**
- * 
- * Main class, contains all the base WPILib functions
- *
- */
 public class Robot extends IterativeRobot {
 
-	Autonomous auto;
-
-	@Override
-	public void robotInit() {
-	}
-
-	@Override
-	public void autonomousInit() {
-		auto = new AutonomousSquare();
-	}
-
 	/**
-	 * Calls on AutonomousController to do its thing
+	 * Runs every 20 msec during Autonomous period Calls on AutonomousController
+	 * to do its thing Calls on the Dashboard controller to put data on the
+	 * SmartDashboard
 	 */
 	@Override
 	public void autonomousPeriodic() {
-		auto.periodic();
+		AutonomousController.periodic();
+		DashboardController.putData();
 	}
 
 	/**
-	 * Calls on drive controller to do its thing
+	 * Runs every 20 msec during Autonomous period Calls on RobotController to
+	 * do its thing Calls on the Dashboard controller to put data on the
+	 * SmartDashboard
 	 */
 	@Override
 	public void teleopPeriodic() {
 		RobotController.joystickControl();
-		System.out
-				.println(RobotSensorController.getPotentiometer("main").get());
+		DashboardController.putData();
 	}
 }

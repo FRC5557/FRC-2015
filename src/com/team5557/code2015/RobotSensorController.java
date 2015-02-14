@@ -6,6 +6,10 @@ import java.util.Map;
 import com.team5557.code2015.sensors.SensorPotentiometer;
 import com.team5557.code2015.sensors.SensorUltrasonic;
 
+/**
+ * Class that contains all the sensors that robots are using and gives easy
+ * access to their values
+ */
 public class RobotSensorController {
 
 	private static Map<String, SensorPotentiometer> potentiometers;
@@ -15,7 +19,8 @@ public class RobotSensorController {
 		potentiometers = new HashMap<String, SensorPotentiometer>();
 		ultrasonics = new HashMap<String, SensorUltrasonic>();
 
-		potentiometers.put("main", new SensorPotentiometer(0));
+		// initializes currently used sensors
+		potentiometers.put("main", new SensorPotentiometer(0, 0.03, 0.87));
 		ultrasonics.put("main", new SensorUltrasonic(0, 1));
 	}
 

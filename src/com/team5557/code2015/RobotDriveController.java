@@ -4,7 +4,7 @@ import edu.wpi.first.wpilibj.RobotDrive;
 import edu.wpi.first.wpilibj.RobotDrive.MotorType;
 
 /**
- * 
+ *
  * Contains functions and variables relevant to controlling the drive of the
  * robot
  *
@@ -28,12 +28,14 @@ public class RobotDriveController {
 	 * steering is natural
 	 */
 	private static void initDrive() {
-		drive = new RobotDrive(0, 1, 2, 3);
+		drive = new RobotDrive(RobotMotorController.getMotor(0),
+				RobotMotorController.getMotor(1),
+				RobotMotorController.getMotor(2),
+				RobotMotorController.getMotor(3));
 		drive.setInvertedMotor(MotorType.kFrontLeft, true);
 		drive.setInvertedMotor(MotorType.kFrontRight, true);
 		drive.setInvertedMotor(MotorType.kRearLeft, true);
 		drive.setInvertedMotor(MotorType.kRearRight, true);
-		RobotMotorController.addMotor(9);
 	}
 
 	/**

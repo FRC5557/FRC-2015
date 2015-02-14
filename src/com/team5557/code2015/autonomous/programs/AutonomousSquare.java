@@ -1,10 +1,13 @@
-package com.team5557.code2015.autonomous.programs.square;
+package com.team5557.code2015.autonomous.programs;
 
-import com.team5557.code2015.autonomous.Autonomous;
-import com.team5557.code2015.autonomous.programs.actions.AutonomousActionMoveForward;
-import com.team5557.code2015.autonomous.programs.actions.AutonomousActionTurnRight;
+import com.team5557.code2015.autonomous.ActionSet;
+import com.team5557.code2015.autonomous.actions.AutonomousActionMoveForward;
+import com.team5557.code2015.autonomous.actions.AutonomousActionTurnRight;
 
-public class AutonomousSquare extends Autonomous {
+/**
+ * Sample autonomous program to demonstrate the custom action scheduler
+ */
+public class AutonomousSquare extends ActionSet {
 
 	public AutonomousSquare() {
 		actions.add(new AutonomousActionMoveForward(100));
@@ -16,6 +19,6 @@ public class AutonomousSquare extends Autonomous {
 		actions.add(new AutonomousActionMoveForward(100));
 		actions.add(new AutonomousActionTurnRight(50));
 
-		current = actions.get(currentId);
+		currentAction = actions.get(currentActionId);
 	}
 }
