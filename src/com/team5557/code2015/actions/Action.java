@@ -11,11 +11,13 @@ public abstract class Action {
 	public void run() {
 		if (!isSatisfied()) {
 			periodic();
+			checkSatisfaction();
 		}
 	}
 
-	private void periodic() {
-	}
+	private void periodic() {}
+	
+	private void checkSatisfaction() {}
 
 	public boolean isSatisfied() {
 		return satisfied;
