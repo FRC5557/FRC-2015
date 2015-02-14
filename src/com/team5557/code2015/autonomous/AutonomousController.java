@@ -1,5 +1,6 @@
 package com.team5557.code2015.autonomous;
 
+import com.team5557.code2015.actions.ActionSet;
 import com.team5557.code2015.autonomous.programs.AutonomousSquare;
 
 /**
@@ -14,7 +15,7 @@ public class AutonomousController {
 	/**
 	 * Generalized Autonomous type variable to contain specific program
 	 */
-	private static Autonomous current;
+	private static ActionSet current;
 
 	/**
 	 * Sets the value of the 'current' variable to the necessary autonomous
@@ -28,13 +29,13 @@ public class AutonomousController {
 	 * Simply refers to the 'current' autonomous program's periodic method
 	 */
 	public static void periodic() {
-		current.periodic();
+		current.runActions();
 	}
 
 	/**
 	 * @return current Autonomous program
 	 */
-	public static Autonomous getCurrent() {
+	public static ActionSet getCurrent() {
 		return current;
 	}
 

@@ -17,7 +17,7 @@ public abstract class Autonomous extends ActionSet {
 	protected int counter;
 	protected int currentId;
 
-	public void runNextAction() {
+	public void runActions() {
 		if (counter <= current.getRunLength()) {
 			current.run();
 			counter++;
@@ -29,7 +29,7 @@ public abstract class Autonomous extends ActionSet {
 	}
 
 	public void periodic() {
-		runNextAction();
+		runActions();
 	}
 
 }

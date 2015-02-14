@@ -20,7 +20,7 @@ public abstract class ActionSet {
 		return currentAction;
 	}
 
-	public void runNextAction() {
+	public void runActions() {
 		currentAction.run();
 		if (currentAction.isSatisfied()) {
 			if (actions.size() > currentActionId) {
