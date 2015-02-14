@@ -36,6 +36,9 @@ public class MoveToPotentiometerAction extends Action {
 		} else { // otherwise, we conclude the arm needs to go down
 			liftUpwards = false;
 		}
+		if(!liftUpwards) {
+			reading = reading + 0.06;
+		}
 	}
 
 	@Override
