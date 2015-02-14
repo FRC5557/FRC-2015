@@ -1,24 +1,29 @@
 package com.team5557.code2015.autonomous.actions;
 
 import com.team5557.code2015.RobotDriveController;
-import com.team5557.code2015.autonomous.AutonomousAction;
+import com.team5557.code2015.actions.Action;
 
-public class AutonomousActionTurnRight implements AutonomousAction {
+public class AutonomousActionTurnRight extends Action {
 
-	int count;
+	int totalCount;
+	int currentCount;
 
 	public AutonomousActionTurnRight(int counts) {
-		count = counts;
+		totalCount = counts;
+		currentCount++;
 	}
 
 	@Override
-	public void run() {
+	protected void periodic() {
 		RobotDriveController.drive().drive(1.0, 1.0);
+		currentCount++;
 	}
 
 	@Override
-	public int getRunLength() {
-		return count;
+	protected void checkSatisfaction() {
+		if(currentCount >= totalCount) {
+			setSatisfied(true);
+		}
 	}
 
 }
