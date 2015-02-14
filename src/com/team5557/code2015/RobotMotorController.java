@@ -25,6 +25,10 @@ public class RobotMotorController {
 	public static Talon getMotor(int id) {
 		return motors.get(id);
 	}
+	
+	public static Map<Integer, Talon> getMotors() {
+		return motors;
+	}
 
 	/**
 	 * Gets motor from hashmap by id and sets its speed

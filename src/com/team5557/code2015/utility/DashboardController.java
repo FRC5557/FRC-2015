@@ -4,6 +4,7 @@ import com.team5557.code2015.RobotMotorController;
 import com.team5557.code2015.RobotSensorController;
 import com.team5557.code2015.sensors.SensorBuiltInAccelerometer;
 
+import edu.wpi.first.wpilibj.Talon;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 /**
@@ -26,16 +27,9 @@ public class DashboardController {
 		SmartDashboard.putNumber("Accelerometer Z",
 				SensorBuiltInAccelerometer.getZ());
 		// Put speed data from all motors
-		SmartDashboard.putNumber("Motor 0", RobotMotorController.getMotor(0)
-				.get());
-		SmartDashboard.putNumber("Motor 1", RobotMotorController.getMotor(1)
-				.get());
-		SmartDashboard.putNumber("Motor 2", RobotMotorController.getMotor(2)
-				.get());
-		SmartDashboard.putNumber("Motor 3", RobotMotorController.getMotor(3)
-				.get());
-		SmartDashboard.putNumber("Motor 9", RobotMotorController.getMotor(9)
-				.get());
+		for(Talon tal : RobotMotorController.getMotors().values()) {
+			SmartDashboard.putNumber("Motor " + tal.getChannel(), tal.get());
+		}
 	}
 
 }
