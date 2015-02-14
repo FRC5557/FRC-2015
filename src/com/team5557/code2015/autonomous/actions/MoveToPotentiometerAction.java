@@ -40,10 +40,16 @@ public class MoveToPotentiometerAction extends Action {
 
 	@Override
 	protected void periodic() {
+		double potentiometerReading = RobotSensorController.getPotentiometer(
+				"main").get();
 		if (liftUpwards) {
-			RobotMotorController.motorSpeed(9, 0.5);
+			RobotMotorController.motorSpeed(9, MathUtility.calculateCurve(
+					reading, potentiometerReading, 1.0));
 		} else {
-			RobotMotorController.motorSpeed(9, -0.5);
+			RobotMotorController.motorSpeed(
+					9,
+					-1 * MathUtility.calculateCurve(reading,
+									potentiometerReading, 1.0));
 		}
 	}
 
