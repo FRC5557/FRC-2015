@@ -5,9 +5,10 @@ import com.team5557.code2015.RobotSensorController;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 public class DashboardController {
-	
+
 	public static void putData() {
-		SmartDashboard.putNumber("Potentiometer Percent", RobotSensorController.getPotentiometer("main").getPercent());
+		SmartDashboard.putNumber("Potentiometer Percent", RobotSensorController
+				.getPotentiometer("main").getPercent());
 	}
 
 }

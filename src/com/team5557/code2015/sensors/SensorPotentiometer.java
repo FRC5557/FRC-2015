@@ -9,10 +9,10 @@ public class SensorPotentiometer {
 	public SensorPotentiometer(int id) {
 		potentiometer = new AnalogPotentiometer(id);
 	}
-	
+
 	public int getPercent() {
-		double percent = (get() + 0.03)/0.87 * 100.0;
-		if(percent >= 100.0) {
+		double percent = (get() + 0.03) / 0.87 * 100.0;
+		if (percent >= 100.0) {
 			return 100;
 		} else {
 			return (int) Math.floor(percent);
