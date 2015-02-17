@@ -43,7 +43,7 @@ public class RobotDriveController {
 	 * drive
 	 */
 	public static void joystickDrive() {
-		drive.arcadeDrive(RobotJoystickController.joystick());
+		drive.arcadeDrive(RobotJoystickController.joystick(), true);
 	}
 
 	/**

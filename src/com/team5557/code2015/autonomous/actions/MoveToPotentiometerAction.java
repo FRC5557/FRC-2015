@@ -36,7 +36,7 @@ public class MoveToPotentiometerAction extends Action {
 		} else { // otherwise, we conclude the arm needs to go down
 			liftUpwards = false;
 		}
-		if(!liftUpwards) {
+		if (!liftUpwards) {
 			reading = reading + 0.06;
 		}
 	}
@@ -51,8 +51,9 @@ public class MoveToPotentiometerAction extends Action {
 		} else {
 			RobotMotorController.motorSpeed(
 					9,
-					-1 * MathUtility.calculateCurve(reading,
-									potentiometerReading, 1.0));
+					-1
+							* MathUtility.calculateCurve(reading,
+							potentiometerReading, 1.0));
 		}
 	}
 
