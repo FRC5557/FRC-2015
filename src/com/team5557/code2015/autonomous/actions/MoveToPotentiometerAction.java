@@ -49,8 +49,8 @@ public class MoveToPotentiometerAction extends Action {
 			RobotMotorController.motorSpeed(
 					9,
 					-1
-					* MathUtility.calculateCurve(reading,
-									potentiometerReading, 1.0));
+							* MathUtility.calculateCurve(reading,
+							potentiometerReading, 1.0));
 		}
 	}
 

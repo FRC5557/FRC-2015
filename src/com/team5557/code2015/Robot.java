@@ -1,5 +1,8 @@
 package com.team5557.code2015;
 
+import com.team5557.code2015.autonomous.AutonomousController;
+import com.team5557.code2015.utility.DashboardController;
+
 import edu.wpi.first.wpilibj.IterativeRobot;
 
 public class Robot extends IterativeRobot {
@@ -11,6 +14,8 @@ public class Robot extends IterativeRobot {
 	 */
 	@Override
 	public void autonomousPeriodic() {
+		AutonomousController.periodic();
+		DashboardController.putData();
 	}
 
 	/**
@@ -21,5 +26,6 @@ public class Robot extends IterativeRobot {
 	@Override
 	public void teleopPeriodic() {
 		RobotController.joystickControl();
+		DashboardController.putData();
 	}
 }
