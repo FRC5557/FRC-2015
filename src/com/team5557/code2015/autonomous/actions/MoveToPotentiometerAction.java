@@ -37,7 +37,7 @@ public class MoveToPotentiometerAction extends Action {
 			liftUpwards = false;
 		}
 		if (!liftUpwards) {
-			reading = reading + 0.06;
+			reading = reading;
 		}
 	}
 

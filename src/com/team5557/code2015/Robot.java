@@ -14,8 +14,6 @@ public class Robot extends IterativeRobot {
 	 */
 	@Override
 	public void autonomousPeriodic() {
-		AutonomousController.periodic();
-		DashboardController.putData();
 	}
 
 	/**
@@ -26,6 +24,5 @@ public class Robot extends IterativeRobot {
 	@Override
 	public void teleopPeriodic() {
 		RobotController.joystickControl();
-		DashboardController.putData();
 	}
 }

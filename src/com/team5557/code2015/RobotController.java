@@ -91,7 +91,7 @@ public class RobotController {
 			} else {
 				RobotMotorController.stopMotor(9);
 			}
-		} else if (down && reading > 0.25) { // if full speed down is activated,
+		} else if (down && reading > 0.03) { // if full speed down is activated,
 			// and potentiometer is above
 			// lower limit
 			RobotMotorController.motorSpeed(9, -1.0);
